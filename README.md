@@ -30,6 +30,6 @@ Explored the idea of inspecting and modifying the firmware binary using Ghidra. 
 Research practical methods to recover RUN mode while preserving the current configuration.
 Investigate whether the configuration can be exported as a .json file without entering RUN mode.
 If no practical recovery method is found within a reasonable amount of time, stop further investigation and proceed with:
-Performing a full chip erase.
-Flashing a clean ODrive firmware.
-Reconfiguring and recalibrating the board if necessary.
+    Performing a full chip erase.
+    Flashing a clean ODrive firmware.
+    Reconfiguring and recalibrating the board if necessary.
