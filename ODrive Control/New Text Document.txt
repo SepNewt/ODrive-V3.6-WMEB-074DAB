@@ -1,0 +1,3 @@
+cd /d "D:\IUH\AGV - Ths Lê Duy Tuấn\AMR Control"
+odrive051\Scripts\activate.bat
+set "PATH=%VIRTUAL_ENV%\Lib\site-packages\libusb_package;%PATH%"
