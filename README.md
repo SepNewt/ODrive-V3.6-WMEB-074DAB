@@ -71,3 +71,42 @@ Check Windows Device Manager and USB driver binding in RUN mode.
 Investigate USB initialization, descriptors, cable, and host port.
 
 After communication is restored, disable automatic axis startup before reconnecting the motors.
+
+## 16/07/2026 — RUN Mode and Motor Control
+
+### Goal
+
+Restore ODrive communication in RUN mode and prepare Python motor control.
+
+### Completed
+
+- Fixed the conflicting Windows OEM USB driver.
+- Windows now detects: ODrive 3.6 Native Interface
+- Created the compatible environment:
+  - `odrive051`
+  - `odrive 0.5.1.post0`
+- Connected successfully to ODrive:
+  - Serial: `206D344F4230`
+  - Hardware: `3.6-56V`
+  - Firmware: `0.5.1-dev`
+- Verified both Native USB/Fibre and USB ASCII communication.
+- Confirmed that the previous configuration and calibration data were preserved.
+- Read bus voltage, uptime, axis errors, motor status and encoder status.
+- Prepared Python code for:
+  - connection and calibration checks;
+  - USB keepalive/reconnect;
+  - two-motor velocity control;
+  - torque-control testing;
+  - watchdog feeding and safe return to `IDLE`.
+
+### Current status
+
+- DFU mode: working.
+- RUN mode: working.
+- Native USB: working.
+- Configuration/calibration: preserved.
+- Python motor control: working.
+
+### Next steps
+
+- Make a WebServer to wirelessly control the motors via WiFi or wireless.
